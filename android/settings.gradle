@@ -1,0 +1,3 @@
+rootProject.name = 'RN_Router_Flux'
+
+include ':app'
