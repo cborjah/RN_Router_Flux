@@ -2,22 +2,18 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { Actions } from 'react-native-router-flux'; // Actions is used to navigate from scene to scene
 
-const ScarletScreen = () => {
+// Modal is similiar to the other components, but uses Actions.pop() instead.
+
+const ModalScreen = () => {
   return (
     <View style={styles.container}>
       <Text
         style={styles.welcome}
-        onPress={() => Actions.grey()}>
-        Scarlet Screen
-      </Text>
-
-      <Text
-        style={styles.welcome}
-        onPress={() => Actions.modal()}>
-        Modal Screen
+        onPress={() => Actions.pop()}>
+        Modal
       </Text>
     </View>
-  )
+  );
 }
 
 const styles = {
@@ -25,7 +21,7 @@ const styles = {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#bb0000",
+    backgroundColor: "#FF8200",
   },
   welcome: {
     fontSize: 20,
@@ -35,4 +31,4 @@ const styles = {
   }
 }
 
-export default ScarletScreen;
+export default ModalScreen;

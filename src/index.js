@@ -11,6 +11,8 @@ import MaizeScreen from './components/maizeScreen';
 import GoldScreen from './components/goldScreen';
 import BlackScreen from './components/blackScreen';
 
+import ModalScreen from './components/modalScreen.js';
+
 const TabIcon = ({ selected, title }) => {
   return (
     <Text style={{ color: selected ? 'red' : 'black' }}>{title}</Text>
@@ -27,7 +29,6 @@ const App = () => {
           tabs // Creates tabs, equivalent to tabs={true}
           tabBarStyle={{ backgroundColor: "#FFFFFF" }}
         >
-
           <Scene key="osu" title="OSU" icon={TabIcon}>
             <Scene
               key="scarlet"
@@ -72,8 +73,15 @@ const App = () => {
               title="Black"
             />
           </Scene>
-
         </Scene>
+
+        <Scene
+          key="modal"
+          component={ModalScreen}
+          title="Modal" // Not necessary
+          direction="vertical" // This differentiates modals from other types of scenes
+          hideNavBar // hideNavBar={true}
+        />
 
       </Scene>
     </Router>
